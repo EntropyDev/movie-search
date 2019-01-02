@@ -1,9 +1,9 @@
 <div class="col s12">
-    <input type="text" class="search-input" placeholder="Search" [(ngModel)]="search" (input)="search$.next(search)">
+    <input type="text" class="movie-search" placeholder="Search for a Movie" [(ngModel)]="search" (input)="search$.next(search)">
     <div class="row">
             <movie-preview *ngFor="let movie of searchResults; let i = index"
-            (click)="setCurrentMovie(movie)" [movie]="movie"></movie-preview>
-        <h3 >No Results found for {{ search }}</h3>
+            (click)="setCurrentMovie(movie)" [movie]="movie" [index]="i"></movie-preview>
+        <h3 *ngIf="!fetching && searchResults.length === 0 && search.length > 0" [ngStyle]="{'text-align':'center'}">No Results found for {{ search }}</h3>
     </div>
 </div>
 

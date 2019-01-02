@@ -1,7 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Abel:300,400,600,700,800');
+
 html, body{
     color:rgba(0, 0, 0, 0.8);
-    background: linear-gradient(to bottom, rgb(244, 124, 54) 0%, rgb(244, 54, 54) 30%);
+    background: linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgb(245, 245, 245) 30%);
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
@@ -26,21 +28,33 @@ main {
     margin-top:15px;
 
 }
-.search-input{
+.movie-search{
     height: 6rem !important;
     top:20px;
     font-size: 5rem !important;
     border-bottom: #2f2f2f;
 }
 
-input[type=text]::placeholder{
-    color: white;
-    font-weight: 100;
+.movie-search:active,.movie-search:hover{
+    border-bottom-color: #f4b642!important;
+    box-shadow: #f4b642 0px 0.78255px 0px 0px!important;
 }
 
+input[type=text]::placeholder{
+    color: rgba(0, 0, 0, 0.1);
+    font-weight: 100;
+}
+.card-content.movie-card-content{
+    min-height: 169px;
+}
 .card.movie-card{
-    box-shadow: 5px 5px 2px rgba(0,0,0,0.4);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     border-radius: 0;
+    background-size: cover!important;
+
+}
+.card.movie-card:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
 .card-content.black-text{
@@ -48,7 +62,16 @@ input[type=text]::placeholder{
 }
 
 .page-footer{
-    background-color: #333 !important;
+    background-color: #eee !important;
+}
+.page-footer h5,.page-footer p{
+    font-family: 'Abel', Arial;
+    color: rgba(0, 0, 0, 0.5);
+}
+.page-footer p{
+    font-weight: 300;
+    letter-spacing: 1px;
+    font-size: 16px;
 }
 
 .movie{
@@ -59,6 +82,14 @@ input[type=text]::placeholder{
     cursor: pointer;
     animation: .75s ease-in slide-in;
     animation-fill-mode: forwards;
+}
+
+.movie-title{
+    font-weight: 900;
+}
+.movie-date{
+    font-weight: bolder;
+    font-size: 1.3rem;
 }
 
 @keyframes slide-in{

@@ -7,9 +7,19 @@ import { Movie } from '../Movie';
 })
 export class MoviePreviewComponent implements OnInit {
   @Input() movie:Movie = {}
+  @Input() index:number = 1
   constructor() { }
 
   ngOnInit() {
   }
+
+  backdropStyle = ()=>({
+    'background': `linear-gradient(180deg, rgba(0,0,0,0.5), transparent),url(${this.movie.backdropUrl})`,
+    'bacground-size': 'cover'
+  })
+
+  animationDelay = ()=>({
+    'animation-delay': `${this.index*.15}s`
+  })
 
 }

@@ -1,7 +1,7 @@
 <div class="col m7 s12">
-    <h3 class="fade-in-right">{{movie.title}}</h3>
+    <h3 class="fade-in-right movie-title">{{movie.title}}</h3>
     <div class="row">
-        <div class="col m3 fade-in-right slower">
+        <div class="col m3 fade-in-right slower movie-date ">
             {{movie.release_date}}
         </div>
     </div>
@@ -12,5 +12,5 @@
     </div>
 </div>
 <div class="col m5">
-    <img src="getPostUrl(movie.poster_url)" [alt]="movie.title" class="movie-poster fade-in-left">
+    <img src="{{movie.posterUrl}}" [alt]="movie.title" class="movie-poster fade-in-left">
 </div>

@@ -13,7 +13,4 @@ export class DisplayMovieComponent implements OnInit {
   ngOnInit() {
   }
 
-  getPosterUrl(path:string){
-    return "";
-  }
 }

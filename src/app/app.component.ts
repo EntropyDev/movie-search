@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { data } from './033 mock-data';
 import { Movie } from './Movie';
 import { MovieService } from './movie.service';
 
